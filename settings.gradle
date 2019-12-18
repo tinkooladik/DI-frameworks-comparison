@@ -1,0 +1,2 @@
+include ':core', ':koin', ':dagger', ':dagger-android', ':kodein'
+rootProject.name = 'DI koin'
