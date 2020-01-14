@@ -5,7 +5,7 @@ import dagger.Provides
 import dagger.android.ContributesAndroidInjector
 import di.playground.core.data.UserRepository
 import di.playground.core.data.UserRepositoryImpl
-import di.playground.dagger_android.MainActivity
+import di.playground.dagger_android.ui.MainActivity
 import javax.inject.Singleton
 
 @Module

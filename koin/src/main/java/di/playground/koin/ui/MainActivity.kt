@@ -1,20 +1,18 @@
-package di.playground.dagger
+package di.playground.koin.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import di.playground.core.data.UserRepository
+import di.playground.koin.R
+import org.koin.android.ext.android.inject
 import timber.log.Timber
-import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
-    @Inject
-    lateinit var userRepository: UserRepository
+    private val userRepository by inject<UserRepository>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        App.component.inject(this)
 
         Timber.e(userRepository.fetchUsers().toString())
     }
