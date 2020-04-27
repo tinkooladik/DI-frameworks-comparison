@@ -10,6 +10,10 @@ import org.kodein.di.generic.provider
 import org.kodein.di.generic.singleton
 
 val dataModule = Kodein.Module("data") {
+
     bind<UserRepository>() with singleton { UserRepositoryImpl }
+
+    /* Creates a factory: each time an instance is needed, the function {} will be called.
+     * instance() is a UserRepository parameter for constructor injection */
     bind() from provider { MainViewModel(instance()) }
 }

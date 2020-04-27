@@ -33,7 +33,7 @@ object UserRepositoryImpl : UserRepository {
         randomData.addGenerator(String::class.java, StringPhoneGenerator())
         randomData.addGenerator(String::class.java, StringGenderGenerator())
         randomData.addGenerator(Long::class.java, LongIdGenerator())
-        for (i in 0..10) {
+        for (i in 0..5) {
             users.add(randomData.generate(User::class.java))
         }
     }

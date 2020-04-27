@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.MultibindingActivity"></activity>
+        <activity android:name=".ui.AndroidActivity" />
+        <activity android:name=".ui.LazyActivity" />
+        <activity android:name=".ui.QualifierActivity" />
+        <activity android:name=".ui.ScopeActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
